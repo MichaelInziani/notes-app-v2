@@ -9,7 +9,8 @@ function Home() {
 
  const addNote = async({title, content}) => {
        if (title.length > 0 && content.length) {
-           setNotes((prevNotes) => [{ title, content }, ...prevNotes]);
+           const newNote = { title, content };
+           setNotes((prevNotes) => [newNote, ...prevNotes]);
        } 
     }
   
